@@ -13,7 +13,7 @@ const { error } = require("console");
 const app = express();
 
 
-
+ app.use(express.static(__dirname + '/src'));
 
 app.use(bodyParser.text());
 app.use(bodyParser.json());
@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/", (req,res) => {
     res.send("hello world");
-});
+});s
 
 app.post('/post', (req, res) => {
     console.log("Your Connection to React is established now ");
