@@ -1,0 +1,113 @@
+.home-page {
+  .text-zone {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-height: 90%;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 56px;
+    line-height: 53px;
+    margin: 0;
+    font-family: 'Coolvetica';
+    font-weight: 400;
+
+    &:before {
+      content: '<h1>';
+      font-family: 'La Belle Aurore', cursive;
+      color: #ffd700;
+      font-size: 18px;
+      position: absolute;
+      margin-top: -40px;
+      left: -15px;
+      opacity: 0.6;
+    }
+
+    &:after {
+      content: '<h1/>';
+      font-family: 'La Belle Aurore', cursive;
+      color: #ffd700;
+      font-size: 18px;
+      position: absolute;
+      margin-top: 18px;
+      margin-left: 20px;
+      animation: fadeIn 1s 1.7s backwards;
+      opacity: 0.6;
+    }
+
+    img {
+      margin-left: 20px;
+      opacity: 0;
+      width: 32px;
+      height: auto;
+      animation: rotateIn 1s linear both;
+      animation-delay: 1.4s;
+    }
+  }
+
+  h2 {
+    color: #8d8d8d;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 11px;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    animation: fadeIn 1s 1.8s backwards;
+  }
+
+  .flat-button {
+    color: #ffd700;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid #ffd700;
+    margin-top: 25px;
+    float: left;
+    animation: fadeInAnimation 1s 1.8s backwards;
+    white-space: nowrap;
+
+    &:hover {
+      background: #ffd700;
+      color: #333;
+    }
+  }
+}
+
+$carousel-control-color:             #ffd700;
+$carousel-control-width:             15%;
+$carousel-control-opacity:           .5;
+$carousel-control-hover-opacity:     .9;
+$carousel-control-transition:        opacity .15s ease;
+
+$carousel-indicator-width:           30px;
+$carousel-indicator-height:          3px;
+$carousel-indicator-hit-area-height: 10px;
+$carousel-indicator-spacer:          3px;
+$carousel-indicator-opacity:         .5;
+$carousel-indicator-active-bg:       #ffd700;
+$carousel-indicator-active-opacity:  1;
+$carousel-indicator-transition:      opacity .6s ease;
+
+$carousel-caption-width:             70%;
+$carousel-caption-color:             #ffd700;
+$carousel-caption-padding-y:         1.25rem;
+$carousel-caption-spacer:            1.25rem;
+
+$carousel-control-icon-width:        2rem;
+
+$carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+$carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+
+$carousel-transition-duration:       .6s;
+$carousel-transition:                transform $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+
+$carousel-dark-indicator-active-bg:  #7552c7;
+$carousel-dark-caption-color:        #7552c7;
+$carousel-dark-control-icon-filter:  invert(1) grayscale(100);

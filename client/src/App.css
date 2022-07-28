@@ -1,0 +1,139 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.btn {
+  background-color: #83b4d3;
+  margin-left: 10px;
+  border-radius: 12px;
+  color: rgb(2, 13, 22);
+  border: #f0ea98;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 30px;
+  align-items: center;
+  text-align: center;
+}
+.btn2 {
+  background-color: #EAF9F8;
+  margin-left: 250px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  color: rgb(2, 13, 22);
+  border: #f0ea98;
+  font-family: "Raleway";
+  font-style: bold;
+  font-weight: 500;
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+}
+.footer {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(65, 156, 29);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.footer p {
+  color: rgb(3, 45, 65);
+}
+
+svg {
+  padding-right: 20px;
+  size: 5px;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  width: 100%;
+  text-align: left;
+}
+.form-line {
+  border-right: 1px solid #b29999;
+}
+
+.form-group {
+  margin-top: 10px;
+}
+label {
+  font-size: 1.3em;
+  line-height: 1em;
+  font-weight: normal;
+}
+.form-control {
+  font-size: 1.3em;
+  color: #080808;
+}
+
+.submit {
+  font-size: 1.1em;
+  float: right;
+  width: 150px;
+
+  color: rgb(177, 124, 10);
+}
+.Title {
+  font-size: 2em;
+  color: #74220e;
+
+  text-align: center;
+  margin-bottom: 30px;
+  text-decoration: solid;
+}
+.Title2 {
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 30px;
+  text-decoration: solid;
+}
