@@ -13,7 +13,7 @@ import SignUp from './pages/SignUp';
 import Fonctionnalites from './pages/Fonctionnalites';
 import Menu from "./pages/Menu";
 import Driver from "./pages/Driver"; 
-
+import Users from './components/Users'
 const App = () => {
   return (
     <BrowserRouter>
@@ -27,6 +27,7 @@ const App = () => {
         <Route path="/menu" element={<Menu />}></Route>
         <Route path="/driver" element={<Driver />}></Route>
         <Route path="/fonctionnalites" element={<Fonctionnalites />}></Route>
+        <Route path="/users" element={<Users />}></Route>
         <Route path="*" element={<Home/>}></Route>
       </Routes>
       <Footer></Footer>
