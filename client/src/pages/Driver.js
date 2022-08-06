@@ -1,8 +1,6 @@
 import React from "react";
 import { DriverList } from "../components/DriverList";
 import DriverItem from "../components/DriverItem";
-import { MenuList } from "../components/MenuList";
-import MenuItem from "../components/MenuItem";
 import "../style/Menu.css";
 
 function Driver() {

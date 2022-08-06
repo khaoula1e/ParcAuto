@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext, useState } from "react";
+import axios from "axios";
 import styled from "styled-components";
 import { Link, useNavigate } from 'react-router-dom';
-import logo from "../AUM.jpg"
+import { AuthContext } from "../helpers/AuthContext";
 
 const Container = styled.div`
   width: 100vw;
@@ -60,8 +61,6 @@ const Button = styled.button`
   margin-left: 290px;
  font-family: "Oleo Script", cursive;
 height: 70px;
-
-
 transform: rotate(-0.07deg);
 `;
 
@@ -75,30 +74,51 @@ const Linki = styled.a`
   margin-left: 260px;
 `;
 
-const Login = () => {
+function Login() {
+  const [CIN, setCIN] = useState("");
+  const [nom, setNom] = useState("");
+  const [password, setPassword] = useState("");
+  const { setAuthState } = useContext(AuthContext);
+
+  let history = useNavigate();
+
+  const login = () => {
+    const data = { CIN: CIN, nom: nom, password: password };
+    axios.post("http://localhost:8000/auth/login", data).then((response) => {
+      if (response.data.error) {
+        alert(response.data.error);
+      } else {
+        localStorage.setItem("accessToken", response.data);
+        history("/");
+      }
+    });
+  };
   return (
-    <div>
+    <Form>
+      <input
+        type="text"
+        onChange={(event) => {
+          setCIN(event.target.value);
+        }}
+      />
+      <label>nom:</label>
+      <input
+        type="text"
+        onChange={(event) => {
+          setNom(event.target.value);
+        }}
+      />
+      <label>Password:</label>
+      <input
+        type="password"
+        onChange={(event) => {
+          setPassword(event.target.value);
+        }}
+      />
 
-      
-    <Container>
-      
-
-      <Wrapper >
-        
-        <h1 className='Title'>Se connecter</h1>
-        <Form action="../../login"method="post">
-          <Input type="text" name="CIN" placeholder="CIN" />
-          <Input type="text" name="NOM" placeholder="NOM" />
-          <Input type="password" name="password" placeholder="mot de passe" />
-          <Button type="submit">Se connecter</Button>
-          <Link to="/signup"><Linki >CRÉER UN NOUVEAU COMPTE</Linki></Link>
-        </Form>
-      </Wrapper>
-      
-    </Container>
-      
-    </div>
+      <button onClick={login}> Login </button>
+    </Form>
   );
-};
+}
 
 export default Login;

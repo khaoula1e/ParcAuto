@@ -11,7 +11,7 @@ const About = () => {
         <h1>Parc Auto de l'Agence Urbaine</h1>
         <div >
            <img className='photo' src={img} alt='parc' />
-                  <div class="p-2">
+                  <div className="p-2">
                       <p>
                           Cette application gère l’administration complète d’un ensemble de modules tels que : la gestion des chauffeurs,  la gestion des dotations de carburant
         (les vignettes), la gestion des missions, la gestion des réparations, la gestion des réservations, la gestion des utilisateurs.
