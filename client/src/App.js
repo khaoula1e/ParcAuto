@@ -14,6 +14,9 @@ import Fonctionnalites from './pages/Fonctionnalites';
 import Menu from "./pages/Menu";
 import Driver from "./pages/Driver"; 
 import Users from './components/Users'
+import Vehicule from './pages/Vehicule'
+import Reparations from './pages/Reparations';
+import NouvelleReparation from './pages/NouvelleReparation';
 const App = () => {
   return (
     <BrowserRouter>
@@ -24,11 +27,14 @@ const App = () => {
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/contact" element={<ContactUs />}></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/menu" element={<Menu />}></Route>
+        <Route path="/vehicules" element={<Menu />}></Route>
         <Route path="/driver" element={<Driver />}></Route>
         <Route path="/fonctionnalites" element={<Fonctionnalites />}></Route>
         <Route path="/users" element={<Users />}></Route>
-        <Route path="*" element={<Home/>}></Route>
+        <Route path="/vehicule" element={<Vehicule />}></Route>
+        <Route path="/reparations" element={<Reparations/>}></Route>
+        <Route path="/reparation" element={<NouvelleReparation/>}></Route>
+
       </Routes>
       <Footer></Footer>
     </BrowserRouter>

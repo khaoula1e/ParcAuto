@@ -26,6 +26,7 @@
   font-weight: 10;
   font-size: 50px;
   margin-left: 30px;
+  color: #046c14
 }
 
 form {
@@ -73,7 +74,7 @@ form button {
   width: 140px;
   height: 40px;
   border: none;
-  background-color: #121619;
+  background-color: #046c14;
   color: whitesmoke;
   font-size: 15px;
   cursor: pointer;
@@ -86,4 +87,7 @@ text {
   border: none;
   border-bottom: 1px solid #121619;
   color: black;
+}
+.new{
+  color: #046c14;
 }

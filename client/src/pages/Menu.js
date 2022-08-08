@@ -2,6 +2,7 @@ import React from "react";
 import { MenuList } from "../components/MenuList";
 import MenuItem from "../components/MenuItem";
 import "../style/Menu.css";
+import { Link } from "react-router-dom";
 
 function Menu() {
   return (
@@ -11,15 +12,21 @@ function Menu() {
       <div className="menuList">
         {MenuList.map((menuItem, key) => {
           return (
-            <MenuItem
+            <div>
+              <MenuItem
               key={key}
               image={menuItem.image}
               name={menuItem.name}
               matricule={menuItem.matricule}
             />
+            </div>
+
           );
         })}
       </div>
+      <button className='btnlink'><Link to='/reparations'>Réparations</Link></button>
+      
+
     </div>
   );
 }

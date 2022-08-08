@@ -137,3 +137,39 @@ label {
   margin-bottom: 30px;
   text-decoration: solid;
 }
+.button-link{
+  background-color: #e1a476;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-radius: 0.5rem 0 0 0;
+  color: #74240c;
+  border: #74240c;
+  height: 2rem;
+  font-family: "Raleway";
+  font-style: bold;
+  font-weight: 500;
+  font-size: 25px;
+  align-items: center;
+  text-align: center;
+}
+
+  .btnlink {
+  padding: 0.35rem 0.75rem;
+  letter-spacing: 1.6px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: var(--clr-white);
+  background: #e1a476;
+  border-radius: var(--radius);
+  border-color: transparent;
+  text-transform: uppercase;
+  transition: var(--transition);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  align-items: center;
+  text-align: center;
+  font-style: bold;
+  font-family: "Raleway";
+
+}

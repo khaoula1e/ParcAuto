@@ -7,17 +7,17 @@ export const links = [
   },
   {
     id: 2,
-    url: '/fonctionnalites',
+    url: 'fonctionnalites',
     text: 'Fonctionnalites',
     },
   {
     id: 3,
-    url: '/about',
+    url: 'about',
     text: 'about',
     },
   {
     id: 4,
-    url: '/contact',
+    url: 'contact',
     text: 'Contact ',
   },
 ];

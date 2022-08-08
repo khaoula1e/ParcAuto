@@ -33,7 +33,7 @@ function Slider() {
     <section className="section">
       <div className="title">
         <h2>
-          AUM Auto Parc permet la: 
+          AUM Parc Auto permet la: 
         </h2>
       </div>
       <div className="section-center">
@@ -54,7 +54,7 @@ function Slider() {
           return (
             <article className={position} key={id}>
               <img src={image} alt={name} className="person-img" />
-              <Link to='/'><h4>{name}</h4></Link>
+              <Link to={`/${url}`}><h4>{name}</h4></Link>
               <p className="title">{title}</p>
              <p className="text">{quote}</p>
               <img src={img} className='icon'></img>

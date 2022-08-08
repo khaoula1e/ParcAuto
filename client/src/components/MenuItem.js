@@ -1,7 +1,8 @@
 import React from "react";
 import "../style/Menu.css";
+import { Link } from 'react';
 
-function MenuItem({ image, name, matricule }) {
+function MenuItem({id, image, name, matricule }) {
   return (
     <div className="menuItem">
       <div style={{ backgroundImage: `url(${image})` }}> </div>

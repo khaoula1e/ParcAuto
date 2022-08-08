@@ -12,6 +12,18 @@ const db = require("./models");
 const usersRouter = require("./routes/Users");
 app.use("/auth", usersRouter);
 
+const vehiculesRouter = require("./routes/Vehicules");
+app.use("/cars", vehiculesRouter);
+
+const chauffeurRouter = require("./routes/Chauffeurs");
+app.use("/drivers", chauffeurRouter);
+
+const vignetteRouter = require("./routes/Vignettes");
+app.use("/vignettes", vignetteRouter);
+
+const reparationRouter = require("./routes/Reparations");
+app.use("/reparation", reparationRouter);
+
 
 db.sequelize.sync().then(() => {
   app.listen(8000, () => {
