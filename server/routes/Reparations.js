@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { Vignettes } = require("../models");
+const { Reparations } = require("../models");
 const { validateToken } = require("../middlewares/AuthMiddleware");
 
 router.get("/", async(req, res) => {
@@ -10,8 +10,8 @@ router.get("/", async(req, res) => {
 })
 router.post("/", async(req, res) => {
     const Reparation = req.body;
-    await Reparations.create(post);
-    res.json(post);
+    await Reparations.create(Reparation);
+    res.json(Reparation);
 
 })
 

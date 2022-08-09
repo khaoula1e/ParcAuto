@@ -1,9 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
   const Vignettes = sequelize.define("Vignettes", {
-    vehicule: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     typeEssence: {
       type: DataTypes.STRING,
       allowNull: false,

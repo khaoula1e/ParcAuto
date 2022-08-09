@@ -17,6 +17,8 @@ import Users from './components/Users'
 import Vehicule from './pages/Vehicule'
 import Reparations from './pages/Reparations';
 import NouvelleReparation from './pages/NouvelleReparation';
+import Mission from './pages/Mission';
+import NouvelleMission from './pages/NouvelleMission';
 const App = () => {
   return (
     <BrowserRouter>
@@ -33,7 +35,9 @@ const App = () => {
         <Route path="/users" element={<Users />}></Route>
         <Route path="/vehicule" element={<Vehicule />}></Route>
         <Route path="/reparations" element={<Reparations/>}></Route>
-        <Route path="/reparation" element={<NouvelleReparation/>}></Route>
+        <Route path="/reparation" element={<NouvelleReparation />}></Route>
+        <Route path="/missions" element={<Mission/>}></Route>
+        <Route path="/mission" element={<NouvelleMission/>}></Route>
 
       </Routes>
       <Footer></Footer>

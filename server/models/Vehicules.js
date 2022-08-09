@@ -21,6 +21,16 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       },
   });
+  Vehicules.associate = (models) => {
+        Vehicules.hasMany(models.Vignettes, {
+            onDelete: "cascade",
+            
+        });
+        Vehicules.hasMany(models.Reparations, {
+            onDelete: "cascade",
+            
+        })
+    }
 
   
   return Vehicules;
