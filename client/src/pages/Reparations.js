@@ -1,9 +1,17 @@
+import React, { useState } from "react";
 import Table from 'react-bootstrap/Table';
 import "../style/Menu.css";
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Reparations() {
+  const [reparas, setreparas] = useState([
+    { id: 1, Vehicule: "55018-A-26", Date: "23/06/2022", Description: "Le refroidissement du moteur" },
+    { id: 2, Vehicule: "194768-M", Date: "29/07/2022", Description: "Le pare-brise" },
+    { id: 3, Vehicule: "Leia", Date: "13/03/2021", Description: "Les pneus" },
+  ]);
+
   return (
       <div>
           
@@ -22,25 +30,15 @@ function Reparations() {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>55018-A-26</td>
-          <td>23/06/2022</td>
-          <td>Le refroidissement du moteur</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>194768-M</td>
-          <td>08/06/2022</td>
-          <td>Le pare-brise</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td >207096-M</td>
-          <td >03/05/2022</td>                      
-          <td>Les pneus</td>
-        </tr>
-      </tbody>
+          {reparas.map(p => (
+            <tr key={p.id}>
+              <td>{p.id}</td>
+              <td>{p.Vehicule}</td>
+              <td>{p.Date}</td>
+              <td>{p.Description}</td>
+            </tr>
+          ))}
+        </tbody>
           </Table>
       <div>
         <Button variant="outline-success" classname="btn-rep"><Link to='/reparation'>Ajouter une réparation</Link></Button>
