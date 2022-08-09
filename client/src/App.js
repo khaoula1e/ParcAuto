@@ -1,8 +1,6 @@
 import logo from './logo.svg';
 import React, { Component } from 'react';
 
-//test
-import Test from './pages/Test';
 import { BrowserRouter,Routes ,Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar.js'
@@ -41,7 +39,6 @@ const App = () => {
         <Route path="/missions" element={<Mission/>}></Route>
         <Route path="/mission" element={<NouvelleMission />}></Route>
         
-        <Route path="/test" element={<Test/>}></Route>
 
 
       </Routes>
