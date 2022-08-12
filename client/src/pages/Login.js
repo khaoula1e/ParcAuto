@@ -3,6 +3,9 @@ import axios from "axios";
 import styled from "styled-components";
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from "../helpers/AuthContext";
+import img from '../assets/signup.jpg'
+import "../style/about.css";
+
 
 const Container = styled.div`
   width: 100vw;
@@ -36,8 +39,8 @@ const Title = styled.h1`
 `;
 
 const Form = styled.form`
-  display: flex;
-  flex-direction: column;
+  margin-left: auto;
+    margin-right: auto;
 `;
 
 const Input = styled.input`
@@ -58,10 +61,10 @@ const Button = styled.button`
   cursor: pointer;
   margin-bottom: 30px;
   margin-top: 30px;
-  margin-left: 290px;
- font-family: "Oleo Script", cursive;
-height: 70px;
-transform: rotate(-0.07deg);
+  margin-left: 250px;
+  font-family: "Oleo Script", cursive;
+  height: 70px;
+  transform: rotate(-0.07deg);
 `;
 
 const Linki = styled.a`
@@ -71,7 +74,7 @@ const Linki = styled.a`
   cursor: pointer;
   margin-bottom: 40px;
   margin-top: 30px;
-  margin-left: 260px;
+  margin-left: 270px;
 `;
 
 function Login() {
@@ -94,30 +97,38 @@ function Login() {
     });
   };
   return (
-    <Form>
+    <Container>
+      <Wrapper>
+        <h1 className='Title'>Se connecter</h1>
+        <Form>
       <input
         type="text"
         onChange={(event) => {
           setCIN(event.target.value);
-        }}
+            }}
+            placeholder="CIN"
       />
-      <label>nom:</label>
       <input
-        type="text"
+            type="text"
+            placeholder="Nom d'utilisateur"            
         onChange={(event) => {
           setNom(event.target.value);
         }}
       />
-      <label>Password:</label>
       <input
-        type="password"
+            type="password"
+            placeholder="Mot de passe"           
         onChange={(event) => {
           setPassword(event.target.value);
         }}
       />
-
-      <button onClick={login}> Login </button>
+          <Button onClick={login}> Login </Button>
+          <h1 className='Title2'>Vous ne possédez pas de compte ?</h1>
+          <Link to="/signup"><Linki >Inscrivez-vous</Linki></Link>
     </Form>
+      </Wrapper>
+    </Container>
+    
   );
 }
 
