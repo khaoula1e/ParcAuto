@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { Link } from "react-router-dom";
 import { FaQuoteRight } from 'react-icons/fa';
+import Vehicule from '../../pages/Vehicule'
+
 import '../../pages/Menu'
 import './slider.css'
 import data from './data';
@@ -54,7 +56,7 @@ function Slider() {
           return (
             <article className={position} key={id}>
               <img src={image} alt={name} className="person-img" />
-              <Link to={`/${url}`}><h4>{name}</h4></Link>
+              <Link to={url} ><h4>{name}</h4></Link>
               <p className="title">{title}</p>
              <p className="text">{quote}</p>
               <img src={img} className='icon'></img>

@@ -12,7 +12,8 @@ import Home from './pages/Home/Home';
 import SignUp from './pages/SignUp';
 import Fonctionnalites from './pages/Fonctionnalites';
 import Menu from "./pages/Menu";
-import Driver from "./pages/Driver"; 
+import Driver from "./pages/Driver";
+import Chauffeurs from "./pages/Chauffeurs"; 
 import Users from './components/Users'
 import Vehicule from './pages/Vehicule'
 import Reparations from './pages/Reparations';
@@ -36,7 +37,7 @@ const App = () => {
         <Route path="/reparations" element={<Reparations/>}></Route>
         <Route path="/missions" element={<Mission/>}></Route>
         <Route path="/mission" element={<NouvelleMission />}></Route>
-        
+        <Route path="/chauffeurs" element={<Chauffeurs />}></Route>
 
 
       </Routes>

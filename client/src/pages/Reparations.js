@@ -18,7 +18,7 @@ function Reparations() {
     }
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:80/backend/save', inputs).then(function(response){
+        axios.post('http://localhost:80/backend/reparations/save', inputs).then(function(response){
           console.log(response.data);
           alert("Ajout effectué avec succès!! Actualisez la page");
         });
@@ -33,42 +33,20 @@ function Reparations() {
       <div className="rightSide">
         <h1 className="new"> Ajouter une réparation</h1>
         <form onSubmit={handleSubmit} id="contact-form">
-                <table cellSpacing="10">
-                    <tbody>
-                        <tr>
-                            <th>
-                                <label  htmlFor="date">Date de réparation </label>
-                            </th>
-                            <td>
-                    <input type="date"
-                      name="date"
-                      placeholder="Entrer la date de réparation..."
-                      onChange={handleChange}
-                    />
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label >Description de la réparation </label>
-                            </th>
-                            <td> 
-                                <input type="text" name="description" onChange={handleChange} />
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label>Véhicule </label>
-                            </th>
-                            <td>
-                                <input type="text" name="vehicule" onChange={handleChange} />
-                            </td>
-                        </tr>
-                <tr>
-                      <button>Ajouter</button>
-                      <Button variant="outline-success" classname="btn-rep" onClick={() => setShow(!show) }>Réparations</Button>
-                </tr>
-                    </tbody>
-                </table>
+              <label  htmlFor="date">Date de réparation </label>
+              <input type="date"
+                  name="date"
+                  placeholder="Entrer la date de réparation..."
+                  onChange={handleChange}
+              />
+              <label >Description de la réparation </label>
+              <input type="text" name="description" onChange={handleChange} />
+              <label>Véhicule </label>
+              <input type="text" name="vehicule" onChange={handleChange} />
+            <div>
+              <button>Ajouter</button>
+              <Button variant="outline-success" classname="btn-rep" onClick={() => setShow(!show) }>Réparations</Button>
+              </div>
             </form>
       </div>
     </div>
@@ -87,7 +65,7 @@ function Reparations() {
         getRepars();
   }, []);
   function getRepars() {
-        axios.get('http://localhost:80/backend/users/').then(function(response) {
+        axios.get('http://localhost:80/backend/reparations/users/').then(function(response) {
             console.log(response.data);
             setRepars(response.data);
         });
@@ -95,7 +73,7 @@ function Reparations() {
 
   const addhandler = e => {
     e.preventDefault();
-    axios.post('http://localhost:80/backend/save', repars).then(function(response){
+    axios.post('http://localhost:80/backend/reparations/save', repars).then(function(response){
             console.log(response.data);
             
         });
@@ -133,6 +111,8 @@ function Reparations() {
         </tbody>
           </Table>
       <div>
+                      <Button variant="outline-success"> <Link to='/'>Home</Link></Button>
+
         <Button variant="outline-success" classname="btn-rep" onClick={() => setShow(!show) }>Ajouter une réparation</Button>
         {show && <Reparation />}
       </div>

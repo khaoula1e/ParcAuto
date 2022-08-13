@@ -24,7 +24,11 @@ function Menu() {
           );
         })}
       </div>
-      <button className='btnlink'><Link to='/reparations'>Réparations</Link></button>
+      <div>
+        <button className='btnlink'><Link to='/reparations'>Réparations</Link></button>
+
+        <button className='btn-rep'><Link to='/vehicule'>Plus d'informations</Link></button>
+      </div>
       
 
     </div>

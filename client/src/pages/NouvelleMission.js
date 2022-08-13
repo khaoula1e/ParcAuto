@@ -33,37 +33,37 @@ function NouvelleMission() {
       <div className="rightSide">
         <form onSubmit={handleSubmit} id="contact-form">
           <label >Véhicule </label>
-          <input name="name"
+          <input name="vehicule"
             placeholder="Entrer le matricule de la véhicule..."
             type="text"
             onChange={handleChange}
           />
           <label >Destination </label>
-          <input name="name"
+          <input name="destination"
             placeholder="Entrer la destination de la mission..."
             type="text"
             onChange={handleChange}
           />
           <label >Date début</label>
-          <input name="email"
+          <input name="dateDebut"
             placeholder="Entrer la destination..."
             type="date"
             onChange={handleChange}
           />
           <label >Date fin</label>
-          <input name="email"
+          <input name="dateFin"
             placeholder="Entrer la date de début..."
             type="date"
             onChange={handleChange}
           />
           <label >Bénéficiaire </label>
-          <input name="name"
+          <input name="beneficiaire"
             placeholder="Entrer le nom du bénéficiaire..."
             type="text"
             onChange={handleChange}
           />
           <label >Mission </label>
-          <input name="name"
+          <input name="mission"
             placeholder="Entrer votre mission..."
             type="text"
             onChange={handleChange}

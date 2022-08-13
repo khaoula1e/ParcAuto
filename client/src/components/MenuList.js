@@ -36,7 +36,7 @@ export const MenuList = [
     id: 5,
     name: "Dacia Logan",
     image: logan4,
-    matricule: '207096-M',
+    matricule: '207097-M',
   },
   {
     id: 6,
@@ -66,7 +66,7 @@ export const MenuList = [
     id: 10,
     name: "Dacia Logan",
     image: logan,
-    matricule: '214340-M',
+    matricule: '214339-M',
   },
   {
     id: 11,

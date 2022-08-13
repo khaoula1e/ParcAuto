@@ -1,0 +1,51 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Title{
+  margin-top: 100px;
+  letter-spacing: 3px;
+  background: linear-gradient(to right, #9bc8dd, #0d1773);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  margin-top: 40px;
+  ;
+  font-family: "Roboto Slab";
+  font-size: 60px;
+
+}
+.tab{
+  margin-left: 50px;
+    margin-right: 50px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
+}
+
+th,
+td {
+  border: 1px solid #ffffff;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #1d5c9c;
+  color: #0c0b0b;
+}
+
+td {
+  background-color: #bad9ec;
+}
+
+
+.bouttons{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}

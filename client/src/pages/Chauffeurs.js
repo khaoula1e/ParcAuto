@@ -6,19 +6,19 @@ import Button from 'react-bootstrap/Button';
 
 export default function Chauffeurs() {
     const navigate = useNavigate();
-    const [cars, setCars] = useState([]);
+    const [drivers, setDrivers] = useState([]);
     const [inputs, setInputs] = useState([]);
 
     const {id} = useParams();
 
     useEffect(() => {
-        getCar();
+        getDriver();
     }, []);
 
-    function getCar() {
-        axios.get(`http://localhost:80/backend/vehicules/cars`).then(function(response) {
+    function getDriver() {
+        axios.get(`http://localhost:80/backend/chauffeurs/drivers`).then(function(response) {
             console.log(response.data);
-            setCars(response.data);
+            setDrivers(response.data);
         });
     }
 
@@ -30,7 +30,7 @@ export default function Chauffeurs() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        axios.put(`http://localhost:80/backend/vehicules/car/${id}/edit`, inputs).then(function(response){
+        axios.put(`http://localhost:80/backend/chauffeurs/driver/${id}/edit`, inputs).then(function(response){
             console.log(response.data);
             navigate('/');
         });
@@ -39,31 +39,28 @@ export default function Chauffeurs() {
     return (
         <div>
             <div className="menu">
-              <h1 className="Title">Détails des véhicules </h1>
+              <h1 className="Title">Tableau de permanence des chauffeurs </h1>
           <div className="underline3"></div>
           </div>
             <div className="tab">
                 <table>
                 <thead>
         <tr>
-          <th>Matricule</th>
-          <th>Marque</th>
-          <th>Kilometrage</th>
-          <th>Date visite</th>
-          <th>Vidange</th>
-          <th>Disponibilité</th>
+          <th>#</th>
+          <th>CIN</th>
+          <th>Nom</th>
+          <th>Date début</th>
+          <th>Date fin</th>
         </tr>
       </thead>
       <tbody>
-        {cars.map(p => (
-            <tr key={p.matricule}>
-              <td>{p.matricule}</td>
-              <td>{p.marque}</td>
-              <td>{p.kilometrage}</td>
-              <td>{p.dateVisite}</td>
-              <td>{p.vidange}</td>
-              <td>{p.parquee}</td>
-
+        {drivers.map(p => (
+            <tr key={p.id}>
+              <td>{p.id}</td>
+              <td>{p.CIN}</td>
+              <td>{p.nom}</td>
+              <td>{p.dateDebut}</td>
+              <td>{p.dateFin}</td>
             </tr>
             
         ))}
@@ -71,7 +68,7 @@ export default function Chauffeurs() {
             </table>
             </div>
             <div classname="bouttons">
-                <Button variant="outline-primary" classname="btn"><Link to='/vehicules'>Retour</Link></Button>
+                <Button variant="outline-primary" classname="btn"><Link to='/'>Home</Link></Button>
                 <Button variant="outline-primary" classname="btn">Ajouter </Button>
                 <Button variant="outline-primary" classname="btn">Modifier </Button>
             </div>

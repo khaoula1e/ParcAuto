@@ -8,7 +8,7 @@ const people = [
     image:
     mission,
     name: 'Gestion des ordres de mission',
-    url: '/',
+    url: '/missions',
     quote:
             "L'application permettra au gestionnaire du parc automobile d'avoir un aperçu sur les ordres de mission de chaque jour,chose qui lui facilitera la gestion des véhicules disponibles dans le parc",
   },
@@ -17,7 +17,7 @@ const people = [
     image:
       vehicule,
     name: 'Gestion des véhicules',
-    url: '/menu',
+    url: '/vehicules',
     quote:
             "L'application permettra au gestionnaire du parc automobile d'avoir un aperçu sur les ordres de mission de chaque jour,chose qui lui facilitera la gestion des véhicules disponibles dans le parc",
   },
@@ -26,7 +26,7 @@ const people = [
     image:
       driver,
     name: 'Gestion des chauffeurs',
-    url: '/driver',
+    url: '/chauffeurs',
     quote:
             "L'application permettra au gestionnaire du parc automobile d'avoir un aperçu sur les ordres de mission de chaque jour,chose qui lui facilitera la gestion des véhicules disponibles dans le parc",
   },
