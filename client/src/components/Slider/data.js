@@ -26,7 +26,7 @@ const people = [
     image:
       driver,
     name: 'Gestion des chauffeurs',
-    url: '/chauffeurs',
+    url: '/driver',
     quote:
             "L'application permettra au gestionnaire du parc automobile d'avoir un aperçu sur les ordres de mission de chaque jour,chose qui lui facilitera la gestion des véhicules disponibles dans le parc",
   },
