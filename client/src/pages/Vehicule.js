@@ -4,7 +4,7 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import '../style/table.css'
 import Button from 'react-bootstrap/Button';
 
-export default function Chauffeurs() {
+export default function Vehicules() {
     const navigate = useNavigate();
     const [cars, setCars] = useState([]);
     const [inputs, setInputs] = useState([]);

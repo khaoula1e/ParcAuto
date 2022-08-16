@@ -18,7 +18,11 @@ import Users from './components/Users'
 import Vehicule from './pages/Vehicule'
 import Reparations from './pages/Reparations';
 import Mission from './pages/Mission';
+import Mission_chauffeur from './pages/chauffeur/Chauffeur';
 import NouvelleMission from './pages/NouvelleMission';
+import Vignettes from './pages/Vignettes';
+//user
+import Form from './pages/utilisateur/Form'
 const App = () => {
   return (
     <BrowserRouter>
@@ -38,7 +42,9 @@ const App = () => {
         <Route path="/missions" element={<Mission/>}></Route>
         <Route path="/mission" element={<NouvelleMission />}></Route>
         <Route path="/chauffeurs" element={<Chauffeurs />}></Route>
-
+        <Route path="/vignettes" element={<Vignettes />}></Route>
+        <Route path="/formulaire" element={<Form />}></Route>
+        <Route path="/mission_chauffeur" element={<Mission_chauffeur/>}></Route>
 
       </Routes>
       <Footer></Footer>

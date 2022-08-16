@@ -16,7 +16,7 @@ const Container = styled.div`
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+
     background: linear-gradient(0.25turn,#093B8D,#93F2F8);
       center;
   background-size: cover;
