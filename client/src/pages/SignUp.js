@@ -91,11 +91,41 @@ const Linki = styled.a`
     password: Yup.string().min(4).max(20).required(),
   });
 
-  const onSubmit = (data) => {
-    axios.post("http://localhost:8000/auth", data).then(() => {
-      console.log(data);
-    });
-  };
+  const onSubmit = (e) =>{
+  e.preventDefault();
+ 
+  if(this.state.password===this.state.passwordConform){
+    const obj ={
+      name:this.state.name,
+      email:this.state.email,
+      phone:this.state.phone,
+      password:this.state.password,
+      passwordConform:this.state.passwordConform,
+    };
+   
+    axios.post('http://localhost:8000/auth',obj)
+    .then(res=> console.log(res.data))
+    .catch(error => {
+      console.log(error.response)
+  });
+ 
+//To clear text box values 
+  this.setState({
+    name: '',
+    email:'',
+    phone:'',
+    password:'',
+    passwordConform:'',
+ 
+  })
+  }
+ 
+  else{
+    alert("Password mismatch")
+  }
+   
+}
+
 
   return (
     <div>
@@ -112,7 +142,6 @@ const Linki = styled.a`
           <ErrorMessage name="CIN" component="span" />
           <Field
             autocomplete="off"
-            id="inputCreatePost"
             name="CIN"
             placeholder="CIN"
           />
@@ -120,7 +149,6 @@ const Linki = styled.a`
           <ErrorMessage name="nom" component="span" />
           <Field
             autocomplete="off"
-            id="inputCreatePost"
             name="nom"
             placeholder="Nom d'utilisateur"
           />
@@ -129,7 +157,6 @@ const Linki = styled.a`
           <Field
             autocomplete="off"
             type="password"
-            id="inputCreatePost"
             name="password"
             placeholder="Mot de passe"
           />

@@ -20,7 +20,11 @@ import Reparations from './pages/Reparations';
 import Mission from './pages/Mission';
 import Mission_chauffeur from './pages/chauffeur/Chauffeur';
 import NouvelleMission from './pages/NouvelleMission';
+import SignIn from './pages/SignIn';
+import Register from './pages/Register'
 import Vignettes from './pages/Vignettes';
+import Dashboard from './pages/Dashbord';
+
 //user
 import Form from './pages/utilisateur/Form'
 const App = () => {
@@ -30,6 +34,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="/signin" element={<SignIn />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/contact" element={<ContactUs />}></Route>
         <Route path="/about" element={<About />}></Route>
@@ -44,6 +50,8 @@ const App = () => {
         <Route path="/chauffeurs" element={<Chauffeurs />}></Route>
         <Route path="/vignettes" element={<Vignettes />}></Route>
         <Route path="/formulaire" element={<Form />}></Route>
+        <Route path="/dashboard" element={<Dashboard />}></Route>
+
         <Route path="/mission_chauffeur" element={<Mission_chauffeur/>}></Route>
 
       </Routes>

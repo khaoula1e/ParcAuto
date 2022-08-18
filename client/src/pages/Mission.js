@@ -54,7 +54,6 @@ function Mission() {
           </Table>
       <div>
         <Button variant="outline-success" classname="btn-rep"><Link to='/mission'>Ajouter un ordre de mission</Link></Button>
-        <Button variant="outline-success" classname="btn-rep">Modifier un ordre de mission</Button>
         <Button variant="outline-success" classname="btn-rep"><Link to='/'>Home</Link></Button>
         
       </div>

@@ -1,0 +1,82 @@
+.Title {
+  margin-top: 100px;
+  letter-spacing: 3px;
+  background: linear-gradient(to right, #9bc8dd, #0d1773);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 40px;
+  font-family: "Roboto Slab";
+  font-size: 60px;
+}
+.bouttons {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.underline3 {
+  width: 10rem;
+  height: 0.25rem;
+  background: #04113d;
+  margin: 0 auto;
+}
+.btnLink{
+    justify-content: center;
+  align-items: center;
+  display: inline-block;
+ width: 300px;
+ height: 50px;
+ /* centrage vertical */
+ line-height: 50px;
+ vertical-align: middle;
+ /* centrage horizontal */
+ text-align: center;
+ /* font style */
+ font-family: Arial,sans-serif;
+ font-size: medium; 
+ color: white;
+ text-decoration: none;
+ font-weight: bold;
+ /* background style */
+ background: #98d2eb;
+}
+.dashboard{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.bouttons{
+    justify-content: center;
+  align-items: center;
+}
+.tab {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+th,
+td {
+  border: 1px solid #fcfcfc;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #1d5c9c;
+  color: #0c0b0b;
+}
+
+td {
+  background-color: #ffffff;
+}

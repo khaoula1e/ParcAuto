@@ -2,6 +2,8 @@ import React from "react";
 import { DriverList } from "../components/DriverList";
 import DriverItem from "../components/DriverItem";
 import "../style/Menu.css";
+import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 
 function Driver() {
   return (
@@ -20,6 +22,8 @@ function Driver() {
           );
         })}
       </div>
+              <Button variant="outline-success" classname="btn-rep"><Link to='/chauffeurs'>Tableau de permanence</Link></Button>
+
     </div>
   );
 }

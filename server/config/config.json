@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "",
-    "database": "parcaum",
+    "database": "react-crud",
     "host": "localhost",
     "dialect": "mysql"
   },
