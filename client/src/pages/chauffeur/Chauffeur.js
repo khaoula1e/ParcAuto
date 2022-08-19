@@ -57,7 +57,7 @@ function Mission() {
           </Table>
       <div>
         <Button variant="outline-success" classname="btn-rep"><Link to='/'>Home</Link></Button>
-        
+        <Button variant="outline-success" classname="btn-rep"><Link to='/permanence'>Tableau de permanence</Link></Button>
       </div>
     </div>
   );

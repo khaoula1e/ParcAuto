@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@emailjs/browser": "^3.6.2"
+    "@emailjs/browser": "^3.6.2",
+    "react-google-button": "^0.7.2"
   }
 }

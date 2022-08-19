@@ -1,34 +1,3 @@
-.contact1 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background: cornsilk;
-}
-
-.contact1 .leftSide {
-  height: 100%;
-  flex: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.contact1 .rightSide {
-  height: 100%;
-  flex: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contact1 .leftSide h1 {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-weight: 10;
-  font-size: 50px;
-  margin-left: 30px;
-  color: #046c14
-}
 
 form {
   display: flex;
@@ -66,8 +35,11 @@ textarea:focus {
 }
 
 form label {
+  margin-right: 50px;
   margin-top: 15px;
-  color: grey;
+  color: #99a0a1;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 form button {
@@ -126,7 +98,7 @@ text {
    margin: 10px 20px 30px ;
    padding:10px 30px 10px 35px;
    width: 250px;
-   background-color:#e7a875;
+   background-color:#3f4d61;
    border-radius:4px;
    margin-left: 80px;
 }
@@ -153,8 +125,7 @@ input[type="text"].exercice1_champ:focus, input[type="password"].exercice1_champ
    background-color:#EEEEEE;
 }
 .btnon{
-   background-color:#e7a875;
-   color:#17925f;
+   background-color:#73b2ec;
    padding:6px 20px 6px 20px;
    margin: 10px 20px 30px ;
    border:none;
